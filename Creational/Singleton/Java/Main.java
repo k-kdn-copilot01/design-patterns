@@ -26,23 +26,6 @@ public class Main {
         eager1.doSomething();
         System.out.println();
         
-        // Test Database Connection Singleton
-        System.out.println("3. Testing Database Connection Singleton:");
-        DatabaseConnection db1 = DatabaseConnection.getInstance();
-        DatabaseConnection db2 = DatabaseConnection.getInstance();
-        
-        System.out.println("db1 == db2: " + (db1 == db2));
-        System.out.println("Connection String: " + db1.getConnectionString());
-        
-        // Demonstrate database operations
-        db1.connect();
-        db1.executeQuery("SELECT * FROM users");
-        db2.executeQuery("SELECT * FROM products"); // Same instance
-        db1.disconnect();
-        
-        // Try to execute query after disconnect
-        db2.executeQuery("SELECT * FROM orders");
-        
         System.out.println("\n=== Demo Complete ===");
     }
 }
