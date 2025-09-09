@@ -1,0 +1,123 @@
+# Custom Instructions for GitHub Copilot - Design Patterns Repository
+
+## Repository Overview
+This is a comprehensive Design Patterns learning repository with implementations in multiple programming languages. The focus is on educational content with clear explanations and practical examples.
+
+## Project Structure
+```
+design-patterns/
+├── Creational/
+│   ├── Singleton/
+│   │   ├── Java/
+│   │   ├── Python/
+│   │   └── TypeScript/
+│   ├── Factory/
+│   └── Builder/
+├── Structural/
+└── Behavioral/
+```
+
+## Coding Standards
+
+### Language Preferences
+- **Comments**: Use Vietnamese for educational explanations
+- **Code**: Use English for variables, functions, and technical terms
+- **Documentation**: Bilingual approach (Vietnamese + English)
+
+### Code Quality
+- Write clean, readable, and well-documented code
+- Include both basic and advanced implementations
+- Provide practical, real-world examples
+- Always include working demo/test code
+
+### Documentation Requirements
+- Comprehensive README files for each pattern
+- Step-by-step running instructions
+- Comparison tables and analysis
+- When to use vs when not to use
+- Pros and cons clearly listed
+
+### Educational Focus
+- Prioritize learning and understanding
+- Include multiple implementation approaches
+- Show best practices and anti-patterns
+- Provide context for real-world usage
+
+## Pattern Implementation Guidelines
+
+### For Each Design Pattern:
+1. **Basic Implementation** - Simple, easy to understand
+2. **Advanced Implementation** - Production-ready with best practices
+3. **Real-world Example** - Practical use case
+4. **Demo/Test Code** - Working examples
+5. **Comprehensive Documentation** - Learning-focused
+
+### Singleton Pattern Specifics:
+- Always include Lazy and Eager initialization
+- Mark thread-safety clearly
+- Provide database connection examples
+- Include performance comparisons
+
+### Factory Pattern Specifics:
+- Include Simple Factory, Factory Method, and Abstract Factory
+- Show different product types and creators
+- Provide configuration-based factory examples
+
+### Builder Pattern Specifics:
+- Include step-by-step construction
+- Show fluent interface implementation
+- Provide director class for complex objects
+
+## File Naming Conventions
+- Use descriptive names: `LazySingleton.java`, `EagerSingleton.java`
+- Include pattern type in filename when multiple approaches exist
+- Use `Main.java` or `Demo.java` for test/demo files
+- Always include `README.md` with comprehensive documentation
+
+## Language-Specific Guidelines
+
+### Java
+- Use proper package structure
+- Include comprehensive Javadoc comments
+- Follow Java naming conventions
+- Include both basic and advanced implementations
+
+### Python
+- Use type hints where appropriate
+- Follow PEP 8 style guidelines
+- Include docstrings for all functions and classes
+- Use `if __name__ == "__main__":` for demo code
+
+### TypeScript/JavaScript
+- Use proper TypeScript types
+- Include JSDoc comments
+- Follow modern ES6+ conventions
+- Include both CommonJS and ES modules examples
+
+## When Suggesting Code:
+1. **Consider the learning context** - explain why, not just how
+2. **Provide multiple approaches** - show different ways to solve the same problem
+3. **Include practical examples** - make it relevant to real projects
+4. **Write comprehensive documentation** - help others learn
+5. **Use Vietnamese for explanations** - make it accessible to Vietnamese learners
+6. **Include working demos** - always provide runnable code
+7. **Show best practices** - demonstrate proper implementation patterns
+
+## Anti-patterns to Avoid:
+- Overly complex implementations without explanation
+- Missing documentation
+- Single approach without alternatives
+- Generic examples without context
+- Code without working demos
+- Inconsistent naming conventions
+- Missing error handling
+- Poor separation of concerns
+
+## Repository Goals:
+- Educational resource for design patterns
+- Multi-language implementations
+- Clear, comprehensive documentation
+- Practical, real-world examples
+- Vietnamese language support for learning
+- Production-ready code examples
+- Best practices demonstration
