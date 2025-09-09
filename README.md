@@ -78,12 +78,19 @@ The purpose is to provide a clean and practical reference for developers who wan
 3. Open the source code files.  
 4. Compile and run them locally.
 
-Example:
+Examples:
 
+**Java:**
 ```bash
 cd Creational/Singleton/Java
 javac *.java
 java Main
+```
+
+**PHP:**
+```bash
+cd Creational/Singleton/Php
+php Main.php
 ````
 
 ---
