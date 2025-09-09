@@ -12,7 +12,9 @@ design-patterns/
 │   │   ├── Python/
 │   │   └── TypeScript/
 │   ├── Factory/
+│   │   └── ... 
 │   └── Builder/
+│       └── ...
 ├── Structural/
 └── Behavioral/
 ```
