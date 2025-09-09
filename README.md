@@ -9,22 +9,23 @@ The purpose is to provide a clean and practical reference for developers who wan
 
 ## 📂 Repository Structure
 
-├── Creational/ # Khởi tạo (Creational Patterns)
-│ ├── Singleton/
-│ │ ├── Java/
-│ │ └── Php/
-│ ├── FactoryMethod/
-│ └── AbstractFactory/
+```
+.
+├── Creational/              # Khởi tạo (Creational Patterns)
+│   ├── Singleton/
+│   ├── FactoryMethod/
+│   └── AbstractFactory/
 │
-├── Structural/ # Cấu trúc (Structural Patterns)
-│ ├── Adapter/
-│ ├── Decorator/
-│ └── Proxy/
+├── Structural/              # Cấu trúc (Structural Patterns)
+│   ├── Adapter/
+│   ├── Decorator/
+│   └── Proxy/
 │
-└── Behavioral/ # Hành vi (Behavioral Patterns)
+└── Behavioral/              # Hành vi (Behavioral Patterns)
 ├── Observer/
 ├── Strategy/
 └── Command/
+````
 
 ---
 
