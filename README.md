@@ -22,11 +22,10 @@ The purpose is to provide a clean and practical reference for developers who wan
 │   └── Proxy/
 │
 └── Behavioral/              # Hành vi (Behavioral Patterns)
-├── Observer/
-├── Strategy/
-└── Command/
+    ├── Observer/
+    ├── Strategy/
+    └── Command/
 ````
-
 ---
 
 ## 📖 Patterns Included
