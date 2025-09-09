@@ -10,7 +10,6 @@
 // Include all singleton classes
 require_once 'LazySingleton.php';
 require_once 'EagerSingleton.php';
-require_once 'DatabaseConnection.php';
 
 echo "=== Singleton Design Pattern Demo ===\n\n";
 
@@ -31,22 +30,5 @@ $eager2 = EagerSingleton::getInstance();
 echo "eager1 === eager2: " . ($eager1 === $eager2 ? "true" : "false") . "\n";
 $eager1->doSomething();
 echo "\n";
-
-// Test Database Connection Singleton
-echo "3. Testing Database Connection Singleton:\n";
-$db1 = DatabaseConnection::getInstance();
-$db2 = DatabaseConnection::getInstance();
-
-echo "db1 === db2: " . ($db1 === $db2 ? "true" : "false") . "\n";
-echo "Connection String: " . $db1->getConnectionString() . "\n";
-
-// Demonstrate database operations
-$db1->connect();
-$db1->executeQuery("SELECT * FROM users");
-$db2->executeQuery("SELECT * FROM products"); // Same instance
-$db1->disconnect();
-
-// Try to execute query after disconnect
-$db2->executeQuery("SELECT * FROM orders");
 
 echo "\n=== Demo Complete ===\n";
