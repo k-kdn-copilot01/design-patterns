@@ -82,16 +82,27 @@ Examples:
 
 **Java:**
 ```bash
-cd Creational/Singleton/Java
+# Structure demo (basic implementations)
+cd Creational/Singleton/Java/Structure
 javac *.java
+java Main
+
+# Example demo (real-world example)
+cd ../Example
+javac ../Structure/*.java *.java
 java Main
 ```
 
 **PHP:**
 ```bash
-cd Creational/Singleton/Php
+# Structure demo (basic implementations)
+cd Creational/Singleton/Php/Structure
 php Main.php
-````
+
+# Example demo (real-world example)
+cd ../Example
+php Main.php
+```
 
 ---
 
