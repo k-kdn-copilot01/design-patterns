@@ -2,13 +2,16 @@
 
 This folder contains Java implementations of the **Singleton** design pattern, demonstrating different approaches and a real-world example.
 
-## 📁 Files Overview
+## 📁 Folder Structure
 
-- **`LazySingleton.java`** - Lazy initialization (not thread-safe)
-- **`EagerSingleton.java`** - Eager initialization (thread-safe)
-- **`DatabaseConnection.java`** - Real-world example using synchronized method
-- **`Main.java`** - Demo class to run all examples
-- **`README.md`** - This documentation
+- `Structure/`
+  - `LazySingleton.java` — Lazy initialization (not thread-safe)
+  - `EagerSingleton.java` — Eager initialization (thread-safe)
+  - `Main.java` — Demo for structure-only implementations
+- `Example/`
+  - `DatabaseConnection.java` — Real-world example using synchronized method
+  - `Main.java` — Demo using structure classes with an example
+- `README.md` — This documentation
 
 ## 🎯 When to Use Singleton
 
@@ -20,7 +23,7 @@ The Singleton pattern should be used when:
 
 ## ⚖️ Lazy vs. Eager Initialization
 
-### Lazy Singleton (`LazySingleton.java`)
+### Lazy Singleton (`Structure/LazySingleton.java`)
 ```java
 // Instance created only when first needed
 if (instance == null) {
@@ -36,7 +39,7 @@ if (instance == null) {
 - **Not thread-safe** - multiple threads can create multiple instances
 - Slightly slower first access due to null check
 
-### Eager Singleton (`EagerSingleton.java`)
+### Eager Singleton (`Structure/EagerSingleton.java`)
 ```java
 // Instance created at class loading time
 private static final EagerSingleton instance = new EagerSingleton();
@@ -51,7 +54,7 @@ private static final EagerSingleton instance = new EagerSingleton();
 - Memory usage - instance created even if never used
 - Slower application startup if constructor is heavy
 
-### Thread-Safe Lazy Singleton (`DatabaseConnection.java`)
+### Thread-Safe Lazy Singleton (`Example/DatabaseConnection.java`)
 ```java
 // Synchronized method ensures thread safety
 public static synchronized DatabaseConnection getInstance() {
@@ -72,22 +75,41 @@ public static synchronized DatabaseConnection getInstance() {
 
 ## 🚀 How to Run
 
-1. **Compile all Java files:**
+1. Demo structure implementations only:
    ```bash
+   cd Creational/Singleton/Java/Structure
    javac *.java
-   ```
-
-2. **Run the demo:**
-   ```bash
    java Main
    ```
 
-## 📊 Expected Output
+2. Demo example with structure classes:
+   ```bash
+   cd Creational/Singleton/Java/Example
+   javac ../Structure/*.java *.java
+   java Main
+   ```
 
+## 📊 Expected Output (Structure/Main)
+```
+=== Structure Demo: Singleton Implementations ===
+
+1. Lazy Singleton:
+LazySingleton instance created
+lazy1 == lazy2: true
+LazySingleton is doing something...
+
+2. Eager Singleton:
+EagerSingleton instance created
+EagerSingleton instance created
+EagerSingleton is doing something...
+
+=== Structure Demo Complete ===
+```
+
+## 📊 Expected Output (Example/Main)
 ```
 === Singleton Design Pattern Demo ===
 
-EagerSingleton instance created
 1. Testing Lazy Singleton:
 LazySingleton instance created
 lazy1 == lazy2: true
@@ -96,20 +118,6 @@ LazySingleton is doing something...
 2. Testing Eager Singleton:
 eager1 == eager2: true
 EagerSingleton is doing something...
-
-3. Testing Database Connection Singleton:
-DatabaseConnection instance created
-db1 == db2: true
-Connection String: jdbc:mysql://localhost:3306/mydb
-Connecting to database: jdbc:mysql://localhost:3306/mydb
-Database connection established
-Executing query: SELECT * FROM users
-Query executed successfully
-Executing query: SELECT * FROM products
-Query executed successfully
-Disconnecting from database
-Database connection closed
-Error: No database connection. Please connect first.
 
 === Demo Complete ===
 ```

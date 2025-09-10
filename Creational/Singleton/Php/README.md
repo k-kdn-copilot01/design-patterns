@@ -2,13 +2,16 @@
 
 This folder contains PHP implementations of the **Singleton** design pattern, demonstrating different approaches and a real-world example.
 
-## 📁 Files Overview
+## 📁 Folder Structure
 
-- **`LazySingleton.php`** - Lazy initialization (not thread-safe)
-- **`EagerSingleton.php`** - Eager initialization (simulated thread-safe)
-- **`DatabaseConnection.php`** - Real-world example using lock mechanism
-- **`Main.php`** - Demo class to run all examples
-- **`README.md`** - This documentation
+- `Structure/`
+  - `LazySingleton.php` — Lazy initialization (not thread-safe)
+  - `EagerSingleton.php` — Eager initialization (simulated thread-safe)
+  - `Main.php` — Demo for structure-only implementations
+- `Example/`
+  - `DatabaseConnection.php` — Real-world example using lock mechanism
+  - `Main.php` — Demo using structure classes with an example
+- `README.md` — This documentation
 
 ## 🎯 When to Use Singleton
 
@@ -20,7 +23,7 @@ The Singleton pattern should be used when:
 
 ## ⚖️ Lazy vs. Eager Initialization
 
-### Lazy Singleton (`LazySingleton.php`)
+### Lazy Singleton (`Structure/LazySingleton.php`)
 ```php
 // Instance created only when first needed
 if (self::$instance === null) {
@@ -36,7 +39,7 @@ if (self::$instance === null) {
 - **Not thread-safe** - multiple threads can create multiple instances
 - Slightly slower first access due to null check
 
-### Eager Singleton (`EagerSingleton.php`)
+### Eager Singleton (`Structure/EagerSingleton.php`)
 ```php
 // Instance created when class is first loaded
 EagerSingleton::getInstance();
@@ -51,7 +54,7 @@ EagerSingleton::getInstance();
 - Uses memory even if instance is never used
 - Slower application startup if instance is heavy
 
-### Thread-Safe Lazy Singleton (`DatabaseConnection.php`)
+### Thread-Safe Lazy Singleton (`Example/DatabaseConnection.php`)
 ```php
 // Lock mechanism ensures thread safety simulation
 if (!self::$lock) {
@@ -73,27 +76,41 @@ if (!self::$lock) {
 
 ## 🚀 How to Run
 
-1. **Run the demo:**
+1. Demo structure implementations only:
    ```bash
+   cd Creational/Singleton/Php/Structure
    php Main.php
    ```
 
-## 📊 Expected Output
+2. Demo example with structure classes:
+   ```bash
+   cd Creational/Singleton/Php/Example
+   php Main.php
+   ```
 
+## 📊 Expected Output (Structure/Main)
 ```
-=== Singleton Design Pattern Demo ===
+=== Structure Demo: Singleton Implementations ===
 
-EagerSingleton instance created
-1. Testing Lazy Singleton:
+1. Lazy Singleton:
 LazySingleton instance created
 lazy1 === lazy2: true
 LazySingleton is doing something...
 
-2. Testing Eager Singleton:
+2. Eager Singleton:
+EagerSingleton instance created
+EagerSingleton instance created
 eager1 === eager2: true
 EagerSingleton is doing something...
 
-3. Testing Database Connection Singleton:
+=== Structure Demo Complete ===
+```
+
+## 📊 Expected Output (Example/Main)
+```
+=== Singleton Design Pattern Demo ===
+
+Testing Database Connection Singleton:
 DatabaseConnection instance created
 db1 === db2: true
 Connection String: mysql://localhost:3306/mydb
