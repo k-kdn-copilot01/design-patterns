@@ -93,6 +93,17 @@ javac ../Structure/*.java *.java
 java Main
 ```
 
+```bash
+# Prototype pattern example
+cd Creational/Prototype/Java/Structure
+javac *.java
+java Main
+
+cd ../Example
+javac *.java
+java Main
+```
+
 **PHP:**
 ```bash
 # Structure demo (basic implementations)
@@ -100,6 +111,15 @@ cd Creational/Singleton/Php/Structure
 php Main.php
 
 # Example demo (real-world example)
+cd ../Example
+php Main.php
+```
+
+```bash
+# Prototype pattern example
+cd Creational/Prototype/Php/Structure
+php Main.php
+
 cd ../Example
 php Main.php
 ```
