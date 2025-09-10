@@ -80,7 +80,7 @@ The purpose is to provide a clean and practical reference for developers who wan
 
 Examples:
 
-**Java:**
+**Singleton - Java:**
 ```bash
 # Structure demo (basic implementations)
 cd Creational/Singleton/Java/Structure
@@ -93,7 +93,7 @@ javac ../Structure/*.java *.java
 java Main
 ```
 
-**PHP:**
+**Singleton - PHP:**
 ```bash
 # Structure demo (basic implementations)
 cd Creational/Singleton/Php/Structure
@@ -102,6 +102,19 @@ php Main.php
 # Example demo (real-world example)
 cd ../Example
 php Main.php
+```
+
+**Abstract Factory - Java:**
+```bash
+# Structure demo (basic Abstract Factory pattern)
+cd Creational/AbstractFactory/Java/Structure
+javac *.java
+java Main
+
+# Example demo (UI toolkit example)
+cd ../Example
+javac *.java
+java Main
 ```
 
 ---
