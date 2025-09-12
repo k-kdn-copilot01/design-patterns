@@ -9,19 +9,79 @@ design-patterns/
 ├── Creational/
 │   ├── Singleton/
 │   │   ├── Java/
-│   │   ├── Python/
-│   │   └── TypeScript/
-│   ├── Factory/
+│   │   │   ├── Structure/
+│   │   │   └── Example/
+│   │   ├── Php/
+│   │   │   ├── Structure/
+│   │   │   └── Example/
+│   │   └── Python/
+│   ├── FactoryMethod/
 │   │   └── ... 
-│   └── Builder/
+│   └── AbstractFactory/
 │       └── ...
 ├── Structural/
 └── Behavioral/
 ```
 
-## Coding Standards
+## Code Review Standards & Quality Rules
 
-### Language Preferences
+### 🧹 Clean Code Rules
+1. **Loại bỏ code thừa**: Không thêm chức năng ngoài yêu cầu, xóa comment và code không cần thiết
+2. **Comment rõ ràng**: Thêm comment cho logic phức tạp, đặc biệt với dynamically typed languages
+3. **Code tự giải thích**: Ưu tiên code dễ hiểu hơn comment
+4. **Single responsibility**: Mỗi function/class chỉ làm một việc
+5. **DRY principle**: Tránh duplicate code, tạo reusable functions
+
+### 🔍 Logic & Error Handling
+6. **Xử lý ngoại lệ**: Luôn xử lý NULL, empty values, missing cases với comment lý do nếu bỏ qua
+7. **Transaction management**: Sử dụng transaction & rollback cho thao tác multi-table
+8. **Complete case handling**: Đảm bảo xử lý đầy đủ các trường hợp edge case
+9. **Input validation**: Validate tất cả input parameters và data
+
+### ⚡ Performance Rules
+10. **Tránh N+1 queries**: Không viết query trong vòng lặp
+11. **Giới hạn vòng lặp**: < 100 iterations, tránh nested loops phức tạp
+12. **SQL optimization**: Không dùng SELECT * (get all), sử dụng pagination
+13. **UI responsiveness**: Disable button/loading state để tránh spam click
+14. **Concurrency**: Xử lý duplicate prevention cho batch jobs và multi-server
+15. **Memory management**: Tránh memory leaks, optimize object creation
+
+### 📝 Logging & Monitoring
+16. **Comprehensive logging**: Log tất cả errors, important events, request details
+17. **Structured logs**: Batch jobs có log riêng, dễ trace across servers
+18. **Debug information**: Đủ thông tin để debug production issues
+19. **Error tracking**: Track và monitor errors trong production
+
+### 🎨 UI/UX Standards
+20. **Accessibility**: Button có padding đủ lớn, dễ click (minimum 44px touch target)
+21. **User feedback**: Loading states, error messages rõ ràng
+22. **Responsive design**: Đảm bảo hoạt động tốt trên mọi device
+
+### 🔒 Security Rules
+23. **Environment variables**: Không hardcode keys/tokens, dùng .env hoặc config
+24. **Trusted libraries**: Chỉ dùng thư viện có nguồn gốc rõ ràng, license hợp pháp
+25. **Authentication**: Mọi request cần xác thực, auto logout khi token hết hạn
+26. **HTTP methods**: Dùng POST cho sensitive data, tránh GET với thông tin nhạy cảm
+27. **Data protection**: Không lưu sensitive data local, mã hóa nếu cần thiết
+28. **SQL injection prevention**: Luôn dùng parameterized queries/binding
+29. **Input sanitization**: Sanitize tất cả user input
+30. **Authorization**: Kiểm tra quyền truy cập cho mọi operation
+
+### 🧪 Testing & Quality
+31. **Error scenarios**: Test các trường hợp lỗi, edge cases
+32. **Performance testing**: Kiểm tra với data lớn, concurrent users
+33. **Security testing**: Validate input, test authentication/authorization
+34. **Unit tests**: Viết test cho critical functions
+35. **Integration tests**: Test interaction giữa các components
+
+### 📚 Documentation
+36. **API documentation**: Mô tả rõ parameters, responses, error codes
+37. **Code comments**: Giải thích business logic phức tạp, assumptions
+38. **README files**: Comprehensive documentation cho mỗi pattern
+39. **Step-by-step instructions**: Hướng dẫn chạy code rõ ràng
+40. **Architecture decisions**: Giải thích lý do chọn approach
+
+## Language Preferences
 - **Comments**: Use Vietnamese for educational explanations
 - **Code**: Use English for variables, functions, and technical terms
 - **Documentation**: Bilingual approach (Vietnamese + English)
@@ -31,6 +91,8 @@ design-patterns/
 - Include both basic and advanced implementations
 - Provide practical, real-world examples
 - Always include working demo/test code
+- Follow security best practices
+- Optimize for performance from the start
 
 ### Documentation Requirements
 - Comprehensive README files for each pattern
@@ -38,12 +100,15 @@ design-patterns/
 - Comparison tables and analysis
 - When to use vs when not to use
 - Pros and cons clearly listed
+- Security considerations
+- Performance implications
 
 ### Educational Focus
 - Prioritize learning and understanding
 - Include multiple implementation approaches
 - Show best practices and anti-patterns
 - Provide context for real-world usage
+- Include security and performance considerations
 
 ## Pattern Implementation Guidelines
 
@@ -104,6 +169,25 @@ design-patterns/
 5. **Use Vietnamese for explanations** - make it accessible to Vietnamese learners
 6. **Include working demos** - always provide runnable code
 7. **Show best practices** - demonstrate proper implementation patterns
+8. **Follow security guidelines** - implement secure coding practices
+9. **Optimize for performance** - consider scalability from the start
+10. **Include error handling** - handle all edge cases and exceptions
+11. **Add comprehensive logging** - make debugging easier
+12. **Validate all inputs** - prevent security vulnerabilities
+
+## Code Review Checklist (Always Apply):
+- [ ] Code is clean and readable
+- [ ] No unnecessary functionality or comments
+- [ ] Complex logic is well-commented
+- [ ] All edge cases and errors are handled
+- [ ] No hardcoded secrets or sensitive data
+- [ ] Input validation and sanitization
+- [ ] Proper error handling and logging
+- [ ] Performance optimizations applied
+- [ ] Security best practices followed
+- [ ] Comprehensive documentation included
+- [ ] Working demos provided
+- [ ] Consistent naming conventions
 
 ## Anti-patterns to Avoid:
 - Overly complex implementations without explanation
@@ -114,6 +198,12 @@ design-patterns/
 - Inconsistent naming conventions
 - Missing error handling
 - Poor separation of concerns
+- Hardcoded secrets or configuration
+- SQL injection vulnerabilities
+- Missing input validation
+- Poor performance practices
+- Inadequate logging
+- Security vulnerabilities
 
 ## Repository Goals:
 - Educational resource for design patterns
@@ -123,3 +213,6 @@ design-patterns/
 - Vietnamese language support for learning
 - Production-ready code examples
 - Best practices demonstration
+- Security-first approach
+- Performance-optimized implementations
+- Industry-standard code quality
