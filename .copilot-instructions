@@ -40,7 +40,7 @@ design-patterns/
 
 ### ⚡ Performance Rules
 10. **Tránh N+1 queries**: Không viết query trong vòng lặp
-11. **Giới hạn vòng lặp**: < 100 iterations, tránh nested loops phức tạp
+11. **Tối ưu hóa vòng lặp**: Tránh nested loops phức tạp, tối ưu hiệu suất vòng lặp
 12. **SQL optimization**: Không dùng SELECT * (get all), sử dụng pagination
 13. **UI responsiveness**: Disable button/loading state để tránh spam click
 14. **Concurrency**: Xử lý duplicate prevention cho batch jobs và multi-server
