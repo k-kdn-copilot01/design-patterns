@@ -53,7 +53,7 @@ design-patterns/
 19. **Error tracking**: Track và monitor errors trong production
 
 ### 🎨 UI/UX Standards
-20. **Accessibility**: Button có padding đủ lớn, dễ click (minimum 44px touch target)
+20. **Accessibility**: Tất cả interactive elements (ví dụ: button, link, icon, toggle) phải có touch target tối thiểu 44x44px theo WCAG guideline
 21. **User feedback**: Loading states, error messages rõ ràng
 22. **Responsive design**: Đảm bảo hoạt động tốt trên mọi device
 
