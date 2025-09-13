@@ -1,0 +1,9 @@
+{
+  "name": "prototype-pattern-js-demo",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "prototype:structure": "node JavaScript/Structure/Main.js",
+    "prototype:example": "node JavaScript/Example/Main.js"
+  }
+}
