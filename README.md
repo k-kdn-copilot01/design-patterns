@@ -16,6 +16,8 @@ The purpose is to provide a clean and practical reference for developers who wan
 │   │   ├── Java/
 │   │   ├── Php/
 │   │   └── Python/
+│   ├── Builder/
+│   │   └── Python/
 │   ├── FactoryMethod/
 │   └── AbstractFactory/
 │
@@ -102,6 +104,17 @@ php Main.php
 # Example demo (real-world example)
 cd ../Example
 php Main.php
+```
+
+**Python:**
+```bash
+# Structure demo (basic implementations)
+cd Creational/Builder/Python/Structure
+python main.py
+
+# Example demo (real-world example)
+cd ../Example
+python main.py
 ```
 
 ---
