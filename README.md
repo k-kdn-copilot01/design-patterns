@@ -104,6 +104,25 @@ cd ../Example
 php Main.php
 ```
 
+**Python:**
+```bash
+# Structure demo (basic implementations)
+cd Creational/Singleton/Python/Structure
+python main.py
+
+# Example demo (real-world example)
+cd ../Example
+python main.py
+
+# Abstract Factory pattern
+cd Creational/AbstractFactory/Python/Structure
+python main.py
+
+# Abstract Factory example (GUI themes)
+cd ../Example
+python main.py
+```
+
 ---
 
 ## 📚 Reference
