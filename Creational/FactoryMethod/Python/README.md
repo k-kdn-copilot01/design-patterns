@@ -42,7 +42,7 @@ Creational/
 
 **Python:**
 ```bash
-cd Creational/FactoryMethod/Structure
+cd Creational/FactoryMethod/Python/Structure
 python main.py
 ```
 
@@ -50,7 +50,7 @@ python main.py
 
 **Python:**
 ```bash
-cd Creational/FactoryMethod/Example
+cd Creational/FactoryMethod/Python/Example
 python main.py
 ```
 
