@@ -1,0 +1,21 @@
+{
+  "name": "prototype-pattern",
+  "version": "1.0.0",
+  "description": "Prototype Design Pattern implementation in TypeScript",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "start:structure": "ts-node Structure/Main.ts",
+    "start:example": "ts-node Example/Main.ts",
+    "dev:structure": "ts-node Structure/Main.ts",
+    "dev:example": "ts-node Example/Main.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "ts-node": "^10.9.0",
+    "typescript": "^5.0.0"
+  },
+  "keywords": ["design-pattern", "prototype", "typescript", "clone"],
+  "author": "",
+  "license": "MIT"
+}
