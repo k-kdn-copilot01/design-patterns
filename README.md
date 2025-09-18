@@ -17,6 +17,7 @@ The purpose is to provide a clean and practical reference for developers who wan
 │   │   ├── Php/
 │   │   └── Python/
 │   ├── FactoryMethod/
+│   │   └── Python/
 │   └── AbstractFactory/
 │
 ├── Structural/              # Cấu trúc (Structural Patterns)
@@ -102,6 +103,17 @@ php Main.php
 # Example demo (real-world example)
 cd ../Example
 php Main.php
+```
+
+**Python:**
+```bash
+# Structure demo (basic implementations)
+cd Creational/FactoryMethod/Python/Structure
+python main.py
+
+# Example demo (real-world example)
+cd ../Example
+python main.py
 ```
 
 ---
