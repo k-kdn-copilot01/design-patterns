@@ -104,6 +104,17 @@ cd ../Example
 php Main.php
 ```
 
+**Python:**
+```bash
+# Structure demo (basic implementations)
+cd Structural/Bridge/Python/Structure
+python Main.py
+
+# Example demo (real-world example)
+cd ../Example
+python Main.py
+```
+
 ---
 
 ## 📚 Reference
