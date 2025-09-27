@@ -104,6 +104,17 @@ cd ../Example
 php Main.php
 ```
 
+**Python:**
+```bash
+# Structure demo (basic implementations)
+cd Behavioral/Memento/Python/Structure
+python main.py
+
+# Example demo (real-world example)
+cd ../Example
+python main.py
+```
+
 ---
 
 ## 📚 Reference
