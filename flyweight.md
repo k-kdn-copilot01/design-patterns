@@ -1,20 +1,20 @@
-# Flyweight Pattern Demo – Cờ Tướng (Chinese Chess)
+Flyweight Pattern Demo – Cờ Tướng (Chinese Chess)
 
-## 1. Ý tưởng áp dụng Flyweight
-Trong cờ tướng có **32 quân**, nhưng thực tế chỉ có **7 loại quân** (Tướng, Sĩ, Tượng, Xe, Pháo, Mã, Tốt).  
+1. Ý tưởng áp dụng Flyweight
+Trong cờ tướng có 32 quân, nhưng thực tế chỉ có 7 loại quân (Tướng, Sĩ, Tượng, Xe, Pháo, Mã, Tốt).  
 
-- Các quân cùng loại có **hình dạng / hành vi giống nhau**, chỉ khác:  
-  - **Màu sắc** (Đỏ/Đen)  
-  - **Tọa độ trên bàn cờ**  
+- Các quân cùng loại có hình dạng / hành vi giống nhau, chỉ khác:  
+  - Màu sắc (Đỏ/Đen)  
+  - Tọa độ trên bàn cờ**  
 
 ➡️ Nếu tạo 1 object riêng cho từng quân sẽ tốn bộ nhớ.  
-➡️ Dùng **Flyweight**:  
-- **Intrinsic state (nội tại – dùng chung):** loại quân, màu, cách di chuyển.  
-- **Extrinsic state (ngoại tại – không dùng chung):** vị trí hiện tại (x, y).  
+➡️ Dùng Flyweight:  
+- Intrinsic state (nội tại – dùng chung): loại quân, màu, cách di chuyển.  
+- Extrinsic state (ngoại tại – không dùng chung):** vị trí hiện tại (x, y).  
 
 ---
 
-## 2. UML minh họa
+2. UML minh họa
 
 Flyweight (Piece)
 
@@ -38,7 +38,7 @@ Client (ChessGame)
 
 ---
 
-## 3. Code Demo (Java)
+3. Code Demo (Java)
 
 ```java
 import java.util.HashMap;
